@@ -32,6 +32,9 @@ then
     -p ${IQR_GUI_PORT_PUBLISH}:5000 \
     -p ${IQR_REST_PORT_PUBLISH}:5001 \
     -v "${IMAGE_DIR}":/images \
+    -v "/home/local/KHQ/josh.anderson/Projects/SMQTK/SMQTK-Classifier/smqtk_classifier":/usr/local/lib/python3.6/dist-packages/smqtk_classifier \
+    -v "/home/local/KHQ/josh.anderson/Projects/SMQTK/SMQTK-IQR/smqtk_iqr":/usr/local/lib/python3.6/dist-packages/smqtk_iqr \
+    -v "/home/local/KHQ/josh.anderson/Projects/SMQTK/SMQTK-Descriptors/smqtk_descriptors":/usr/local/lib/python3.6/dist-packages/smqtk_descriptors \
     --name "${CONTAINER_NAME}" \
     ${IQR_CONTAINER}:${IQR_CONTAINER_VERSION} -b "$@"
 fi

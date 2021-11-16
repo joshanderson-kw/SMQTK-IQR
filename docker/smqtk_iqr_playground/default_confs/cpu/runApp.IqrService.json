@@ -20,9 +20,18 @@
                 "type": "smqtk_classifier.impls.classification_element.memory.MemoryClassificationElement"
             },
             "classifier_config": {
-                "smqtk_classifier.impls.classify_descriptor_supervised.sklearn_logistic_regression.SkLearnLogisticRegression": {
+                "smqtk_classifier.impls.classify_descriptor_supervised.libsvm.LibSvmClassifier": {
+                    "normalize": 2,
+                    "svm_label_map_uri": null,
+                    "svm_model_uri": null,
+                    "train_params": {
+                        "-b": 1,
+                        "-c": 2,
+                        "-s": 0,
+                        "-t": 0
+                    }
                 },
-                "type": "smqtk_classifier.impls.classify_descriptor_supervised.sklearn_logistic_regression.SkLearnLogisticRegression"
+                "type": "smqtk_classifier.impls.classify_descriptor_supervised.libsvm.LibSvmClassifier"
             },
             "descriptor_factory": {
                 "smqtk_descriptors.impls.descriptor_element.postgres.PostgresDescriptorElement": {
@@ -176,9 +185,18 @@
                     "rank_relevancy": {
                         "smqtk_relevancy.impls.rank_relevancy.wrap_classifier.RankRelevancyWithSupervisedClassifier": {
                             "classifier_inst": {
-                                "smqtk_classifier.impls.classify_descriptor_supervised.sklearn_logistic_regression.SkLearnLogisticRegression": {
+                                "smqtk_classifier.impls.classify_descriptor_supervised.libsvm.LibSvmClassifier": {
+                                    "normalize": 2,
+                                    "svm_label_map_uri": null,
+                                    "svm_model_uri": null,
+                                    "train_params": {
+                                        "-b": 1,
+                                        "-c": 2,
+                                        "-s": 0,
+                                        "-t": 0
+                                    }
                                 },
-                                "type": "smqtk_classifier.impls.classify_descriptor_supervised.sklearn_logistic_regression.SkLearnLogisticRegression"
+                                "type": "smqtk_classifier.impls.classify_descriptor_supervised.libsvm.LibSvmClassifier"
                             }
                         },
                         "type": "smqtk_relevancy.impls.rank_relevancy.wrap_classifier.RankRelevancyWithSupervisedClassifier"
