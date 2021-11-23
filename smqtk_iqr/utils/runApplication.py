@@ -12,6 +12,8 @@ from flask_cors import CORS
 from smqtk_iqr.utils import cli
 import smqtk_iqr.web
 
+import smqtk_classifier.impls.classify_descriptor_supervised.sklearn_svm # TODO
+
 
 def cli_parser() -> ArgumentParser:
     parser = cli.basic_cli_parser(__doc__)
