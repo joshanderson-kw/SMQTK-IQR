@@ -24,12 +24,9 @@
                     "normalize": 2,
                     "svm_label_map_uri": null,
                     "svm_model_uri": null,
-                    "train_params": {
-                        "-b": 1,
-                        "-c": 2,
-                        "-s": 0,
-                        "-t": 0
-                    }
+                    "C": 2.0,
+                    "kernel": "linear",
+                    "probability": true
                 },
                 "type": "smqtk_classifier.impls.classify_descriptor_supervised.sklearn_svm.SkLearnSvmClassifier"
             },
