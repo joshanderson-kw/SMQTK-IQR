@@ -29,7 +29,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     # Only run this job if the current repository owner is Kitware (don't want to run on forks)
-    if: github.repository_owner == 'Kitware'
+    #if: github.repository_owner == 'Kitware'
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
