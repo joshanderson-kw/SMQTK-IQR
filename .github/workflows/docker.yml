@@ -57,7 +57,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker system prune
+          docker system prune -f
           docker image ls -a
           docker-compose --env-file docker/.env -f docker/docker-compose.build.yml build
 
