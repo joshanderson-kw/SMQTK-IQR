@@ -50,10 +50,15 @@ jobs:
 
       - name: Docker pull
         run: |
+          # Print some info on docker memory/cache
+          docker system df
+          docker system info
+          docker system events
           docker-compose --env-file docker/.env -f docker/docker-compose.build.yml pull
 
       - name: Build docker image
         run: |
+          docker image ls -a
           docker-compose --env-file docker/.env -f docker/docker-compose.build.yml build
 
       - name: Push images
