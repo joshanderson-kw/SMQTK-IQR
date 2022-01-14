@@ -1,5 +1,7 @@
 ARG CUDA_DEVEL_IMAGE_TAG
-FROM nvidia/cuda:${CUDA_DEVEL_IMAGE_TAG} AS base
+#FROM nvidia/cuda:${CUDA_DEVEL_IMAGE_TAG} AS base
+# temp: try using older nvidia/cuda tag and see if cache works
+FROM nvidia/cuda@sha256:4d6551c821b086f49ce7ac6fb3e7bb16bb09a436bf0718e9f741f4dfe0bf4cd4 as base
 
 # System Package dependencies
 RUN apt-get -y update \
